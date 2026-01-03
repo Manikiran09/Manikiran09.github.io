@@ -1,7 +1,7 @@
  body {
             margin: 10;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif
             background-color: rgba(107, 0, 128, 0.325);
         }
         .header {
@@ -9,6 +9,7 @@
             color: yellow;
             padding: 10px;
             margin: 10px;
+            
         }
         .content {
             padding: 20px;
@@ -22,5 +23,8 @@
             color: tomato;
             padding: 10px;
             margin: 10px;
+        }
+        * {
+            box-sizing: border-box;
         }
     
