@@ -2,10 +2,9 @@
             margin: 10;
             padding: 0;
             font-family: Arial, sans-serif
-            background-color: rgba(107, 0, 128, 0.325);
         }
         .header {
-            background-color: brown;
+            background-color: rgb(106, 42, 165);
             color: yellow;
             padding: 10px;
             margin: 10px;
@@ -13,7 +12,7 @@
         }
         .content {
             padding: 20px;
-            background-color: rgb(212, 18, 18);
+            background-color: rgba(205, 205, 205, 0.444);
             min-height: 400px;
             color: red;
             margin: 10px;
