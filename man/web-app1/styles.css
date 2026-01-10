@@ -2,12 +2,28 @@
 {
     background-color: #5b4caf;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: none;
 }
 
 .create
 {
     background-color: #4caf50;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.register-btn
+{
+    background-color: #008CBA;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
