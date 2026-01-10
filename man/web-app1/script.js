@@ -1,28 +1,38 @@
+const users=[];
+function addUser()
+{
+  let name=document.getElementById("name").value;
+  let email=document.getElementById("regEmail").value;
+  let password=document.getElementById("regPass").value;     
+let user={
+  name:name,
+  email:email,
+  password:password
+};
+users.push(user);
+showLoginForm();
+console.log(users);
+}
 function my()
 {
-
-//alert(document.getElementById("log").value);  
-//let hi=LBMSG.innerHTML="email:"+document.getElementById("log").value+
-//" password:"+document.getElementById("pass").value;  
-//alert(hi)
 let email=document.getElementById("log").value;
 let password=document.getElementById("pass").value;
-const regex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|zohomail\.in|kitsw\.ac\.in)$/;
-if (email="manikiran649@gmail.com"&&password==="1234") {
-
-  LBMSG.innerHTML="Welcome!";
-  LBMSG.style.color="green";
+let found=users.find((element) => element.email===email && element.password===password);
+if(found){
+  document.getElementById("LBMSG").innerHTML="Welcome " + found.name;
+  return;
 }
-else{
-  LBMSG.innerHTML="Invalid email domain. Please use valid email.";
+else
+{
+  document.getElementById("LBMSG").innerHTML="Invalid email or password";
 }
 }
 
 function showLoginForm() {
   let str=`<h3>Log in form</h3>
     <p><label id="LBMSG"></label></p>
-    <p> <input type="email" id="log"></p>
-    <p> <input type="password" id="pass"></p>
+    <p> <input type="email" id="log" placeholder="Email"></p>
+    <p> <input type="password" id="pass" placeholder="Password"></p>
     <p><button class="login-btn" onclick="my()">Log in</button></p> 
     <hr>
     <p><button class="login-btn" onclick="showRegisterForm()">Create Account</button></p>   
@@ -36,9 +46,9 @@ function showRegisterForm() {
     <p> <input type="text" id="name" placeholder="Name"></p>
     <p> <input type="email" id="regEmail" placeholder="Email"></p>
     <p> <input type="password" id="regPass" placeholder="Password"></p>
-    <p><button class="register-btn" onclick="register()">Register</button></p> 
+    <p><button class="register-btn" onclick="addUser()">Register</button></p> 
     <hr>
-    <p><button class="create" onclick="showLoginForm()">Back to Login</button></p>   
+    <p>Existed user get back to login <button class="create" onclick="showLoginForm()">Back to Login</button></p>   
     ` 
     root.innerHTML=str;
 }
