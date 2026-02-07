@@ -1,0 +1,38 @@
+body{
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chessboard {
+    display: flex;
+    flex-direction: column;
+    border: 4px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.cell {
+    flex: 1;
+}
+
+.cell.white {
+    background-color: #efede8;
+}
+
+.cell.black{
+    background-color: #0f0e0d;
+}
