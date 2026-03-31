@@ -1,5 +1,7 @@
 # EventHub — MERN Event Participation Management & Registration System
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Manikiran09/Manikiran09.github.io?quickstart=1)
+
 A full-featured, production-ready **Event Participation Management and Registration System** built with the **MERN Stack** (MongoDB, Express.js, React, Node.js).
 
 ---
@@ -87,6 +89,36 @@ event-management/
 ---
 
 ## 🚀 Quick Start
+
+### ▶ Open in GitHub Codespaces (Recommended)
+
+Click the badge above or go to **Code → Codespaces → Create codespace on this branch**. The Codespace will automatically:
+
+1. Install Node.js 20 + MongoDB
+2. Run `npm install` for both backend and frontend
+3. Create `backend/.env` with a generated JWT secret
+4. Seed the database with demo accounts and 6 sample events
+
+Once ready, open **two terminals** inside the Codespace:
+
+```bash
+# Terminal 1 — Backend (port 5000)
+cd event-management/backend && npm run dev
+
+# Terminal 2 — Frontend (port 5173)
+cd event-management/frontend && npm run dev
+```
+
+Codespaces will automatically forward port **5173** and open a preview browser tab.
+
+> **Demo accounts** (password: `password123`):
+> - `admin@demo.com` — Admin
+> - `organizer@demo.com` — Organizer
+> - `user@demo.com` — Attendee
+
+---
+
+### 💻 Local Development
 
 ### Prerequisites
 - Node.js v18+
