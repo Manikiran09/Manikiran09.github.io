@@ -22,6 +22,9 @@
   // Run once after the container is created
   "postCreateCommand": "bash .devcontainer/postCreate.sh",
 
+  // Start both dev servers every time the Codespace opens
+  "postStartCommand": "bash .devcontainer/postStart.sh",
+
   "customizations": {
     "vscode": {
       "extensions": [
