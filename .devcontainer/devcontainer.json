@@ -1,0 +1,44 @@
+{
+  "name": "EventHub — MERN Stack",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+
+  "features": {
+    "ghcr.io/devcontainers/features/mongo:1": {}
+  },
+
+  // Forward backend (5000) and Vite dev server (5173)
+  "forwardPorts": [5000, 5173],
+  "portsAttributes": {
+    "5000": {
+      "label": "Backend API",
+      "onAutoForward": "silent"
+    },
+    "5173": {
+      "label": "Frontend",
+      "onAutoForward": "openPreview"
+    }
+  },
+
+  // Run once after the container is created
+  "postCreateCommand": "bash .devcontainer/postCreate.sh",
+
+  // Start both dev servers every time the Codespace opens
+  "postStartCommand": "bash .devcontainer/postStart.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "mongodb.mongodb-vscode",
+        "pkief.material-icon-theme"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
